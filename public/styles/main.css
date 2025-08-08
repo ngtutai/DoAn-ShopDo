@@ -25,11 +25,8 @@ header {
 footer {
   background: rgb(134, 174, 171);
 }
-.list-unstyled li {
-  color: #745500;
-}
-.list-unstyled li a,
-i {
+
+.list-unstyled li a {
   color: #745500;
 }
 

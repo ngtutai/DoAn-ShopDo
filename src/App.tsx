@@ -9,7 +9,7 @@ import Cart from "./users/pages/Cart";
 import Favourite from "./users/pages/Favourite";
 import Login from "./users/auth/Login";
 import Register from "./users/auth/Register";
-import Layout from "./users/Layouts/Layout";
+import Layout from "./users/components/Layout";
 
 function App() {
   return (
