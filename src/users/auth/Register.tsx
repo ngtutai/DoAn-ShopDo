@@ -1,7 +1,5 @@
 import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import Input from "../auth/Input";
 
 const Register = () => {
@@ -38,7 +36,6 @@ const Register = () => {
 
   return (
     <>
-      <Header />
       <div className="container py-5">
         <div className="row justify-content-center">
           <div className="col-md-5">
@@ -53,7 +50,7 @@ const Register = () => {
                   </label>
                   <div className="input-group">
                     <span className="input-group-text">
-                      <i className="fa-solid fa-user"></i>
+                      <i className="fa-solid fa-user text-dark"></i>
                     </span>
                     <Input
                       id="registerName"
@@ -72,7 +69,7 @@ const Register = () => {
                   </label>
                   <div className="input-group">
                     <span className="input-group-text">
-                      <i className="fa-solid fa-envelope"></i>
+                      <i className="fa-solid fa-envelope text-dark"></i>
                     </span>
                     <Input
                       id="registerEmail"
@@ -91,7 +88,7 @@ const Register = () => {
                   </label>
                   <div className="input-group">
                     <span className="input-group-text">
-                      <i className="fa-solid fa-lock"></i>
+                      <i className="fa-solid fa-lock text-dark"></i>
                     </span>
                     <Input
                       id="registerPassword"
@@ -113,7 +110,7 @@ const Register = () => {
                   </label>
                   <div className="input-group">
                     <span className="input-group-text">
-                      <i className="fa-solid fa-lock"></i>
+                      <i className="fa-solid fa-lock text-dark"></i>
                     </span>
                     <Input
                       id="registerConfirmPassword"
@@ -127,7 +124,8 @@ const Register = () => {
 
                 {/* Submit button (no functionality) */}
                 <button type="button" className="btn btn-primary w-100">
-                  <i className="fa-solid fa-user-plus me-2"></i>Register
+                  <i className="fa-solid fa-user-plus text-white me-2"></i>
+                  Register
                 </button>
 
                 <p className="mt-3 text-start">
@@ -141,7 +139,6 @@ const Register = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

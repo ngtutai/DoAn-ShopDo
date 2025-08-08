@@ -1,33 +1,13 @@
-import React, { useState, useRef } from "react";
+// import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import Input from "../auth/Input";
+import AdminHeader from "../components/AdminHeader";
+import AdminFooter from "../components/AdminFooter";
+import Input from "../../users/auth/Input";
 
-const Login = () => {
-  const emailRef = useRef<HTMLInputElement>(null);
-  const passwordRef = useRef<HTMLInputElement>(null);
-
-  const [errorMsg, setErrorMsg] = useState("");
-  const [rememberMe, setRememberMe] = useState(false);
-
-  const formSubmitHandler = (e: React.FormEvent) => {
-    e.preventDefault();
-
-    const email = emailRef.current?.value || "";
-    const password = passwordRef.current?.value || "";
-
-    if (!email || !password) {
-      setErrorMsg("Vui lòng nhập đầy đủ thông tin");
-      return;
-    }
-
-    setErrorMsg("");
-    console.log("Đăng nhập", { email, password, rememberMe });
-
-    // Thêm xử lý đăng nhập tại đây
-  };
-
+const AdminLogin = () => {
   return (
     <>
+      <AdminHeader />
       <div className="container py-5">
         <div className="row justify-content-center">
           <div className="col-md-5">
@@ -39,7 +19,7 @@ const Login = () => {
                 aria-labelledby="login-tab"
               >
                 <h2 className="mb-3 text-center fw-bold">LOGIN</h2>
-                <form className="text-start" onSubmit={formSubmitHandler}>
+                <form className="text-start">
                   {/* Email */}
                   <div className="mb-3">
                     <label htmlFor="loginEmail" className="form-label">
@@ -47,12 +27,11 @@ const Login = () => {
                     </label>
                     <div className="input-group">
                       <span className="input-group-text">
-                        <i className="fa-solid fa-envelope text-dark"></i>
+                        <i className="fa-solid fa-envelope"></i>
                       </span>
                       <Input
                         id="loginEmail"
                         type="email"
-                        inputRef={emailRef}
                         placeholder="Email ..."
                         required
                         className="border-start-0"
@@ -68,11 +47,10 @@ const Login = () => {
                     </label>
                     <div className="input-group">
                       <span className="input-group-text">
-                        <i className="fa-solid fa-lock text-dark"></i>
+                        <i className="fa-solid fa-lock"></i>
                       </span>
                       <Input
                         id="loginPassword"
-                        inputRef={passwordRef}
                         placeholder="Password ..."
                         required
                         className="border-start-0"
@@ -83,9 +61,9 @@ const Login = () => {
                   </div>
 
                   {/* Error message */}
-                  {errorMsg && (
+                  {/* {errorMsg && (
                     <div className="alert alert-danger py-2">{errorMsg}</div>
-                  )}
+                  )} */}
 
                   {/* Remember me */}
                   <div className="form-check mb-3 d-flex align-items-center gap-2">
@@ -93,8 +71,6 @@ const Login = () => {
                       type="checkbox"
                       className="form-check-input"
                       id="rememberMe"
-                      checked={rememberMe}
-                      onChange={(e) => setRememberMe(e.target.checked)}
                       style={{ cursor: "pointer", transform: "scale(1.2)" }}
                     />
                     <label
@@ -108,7 +84,7 @@ const Login = () => {
 
                   {/* Submit button */}
                   <button type="submit" className="btn btn-primary w-100">
-                    <i className="fa-solid fa-right-to-bracket text-white me-2"></i>
+                    <i className="fa-solid fa-right-to-bracket me-2"></i>
                     Login
                   </button>
 
@@ -125,8 +101,9 @@ const Login = () => {
           </div>
         </div>
       </div>
+      <AdminFooter />
     </>
   );
 };
 
-export default Login;
+export default AdminLogin;

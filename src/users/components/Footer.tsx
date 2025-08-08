@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <footer className="mt-3 bg-primary bg-opacity-10 sticky-end">
+    <footer className="mt-3 sticky-end">
       <div className="container py-4">
         <div className="row mx-auto">
           {/* Cột 1: Logo và mô tả */}
@@ -32,22 +32,22 @@ function Footer() {
             <h6 className="fw-bold">Category one</h6>
             <ul className="list-unstyled">
               <li>
-                <a href="/" className="text-danger text-decoration-none">
+                <a href="/" className="text-decoration-none">
                   Category one - 1
                 </a>
               </li>
               <li>
-                <a href="/" className="text-danger text-decoration-none">
+                <a href="/" className="text-decoration-none">
                   Category one - 2
                 </a>
               </li>
               <li>
-                <a href="/" className="text-danger text-decoration-none">
+                <a href="/" className="text-decoration-none">
                   Category one - 3
                 </a>
               </li>
               <li>
-                <a href="/" className="text-danger text-decoration-none">
+                <a href="/" className="text-decoration-none">
                   Category one - 4
                 </a>
               </li>
@@ -59,22 +59,22 @@ function Footer() {
             <h6 className="fw-bold">Category two</h6>
             <ul className="list-unstyled">
               <li>
-                <a href="/" className="text-danger text-decoration-none">
+                <a href="/" className="text-decoration-none">
                   Category two - 1
                 </a>
               </li>
               <li>
-                <a href="/" className="text-danger text-decoration-none">
+                <a href="/" className="text-decoration-none">
                   Category two - 2
                 </a>
               </li>
               <li>
-                <a href="/" className="text-danger text-decoration-none">
+                <a href="/" className="text-decoration-none">
                   Category two - 3
                 </a>
               </li>
               <li>
-                <a href="/" className="text-danger text-decoration-none">
+                <a href="/" className="text-decoration-none">
                   Category two - 4
                 </a>
               </li>
@@ -86,22 +86,22 @@ function Footer() {
             <h6 className="fw-bold">Category Three</h6>
             <ul className="list-unstyled">
               <li>
-                <a href="/" className="text-danger text-decoration-none">
+                <a href="/" className="text-decoration-none">
                   Category Three - 1
                 </a>
               </li>
               <li>
-                <a href="/" className="text-danger text-decoration-none">
+                <a href="/" className="text-decoration-none">
                   Category Three - 2
                 </a>
               </li>
               <li>
-                <a href="/" className="text-danger text-decoration-none">
+                <a href="/" className="text-decoration-none">
                   Category Three - 3
                 </a>
               </li>
               <li>
-                <a href="/" className="text-danger text-decoration-none">
+                <a href="/" className="text-decoration-none">
                   Category Three - 4
                 </a>
               </li>
@@ -111,7 +111,7 @@ function Footer() {
           {/* Cột 5: Category Four */}
           <div className="col-6 col-md-3">
             <h6 className="fw-bold">Liên hệ</h6>
-            <ul className="list-unstyled text-start text-danger mb-3">
+            <ul className="list-unstyled text-start mb-3">
               <li>
                 <i className="fa-solid fa-location-dot me-2"></i>
                 123 Đường ABC, Q.1, TP.HCM
@@ -135,7 +135,10 @@ function Footer() {
                   placeholder="Nhập email của bạn ..."
                   required
                 />
-                <button className="btn btn-danger rounded" type="submit">
+                <button
+                  className="btn btn-outline-danger rounded"
+                  type="submit"
+                >
                   Gửi
                 </button>
               </div>
