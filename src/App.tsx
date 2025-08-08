@@ -10,6 +10,8 @@ import Favourite from "./users/pages/Favourite";
 import Login from "./users/auth/Login";
 import Register from "./users/auth/Register";
 import Layout from "./users/components/Layout";
+// ========== Link Web Admin ========== //
+// ========== Link Lỗi Error ========== //
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />} />
           </Route>
+          {/* ========== Link Web Admin ========== */}
+          {/* ========== Link Error ========== */}
         </Routes>
 
         {/* 🔔 Toast Thông báo */}
